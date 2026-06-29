@@ -9,10 +9,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-java@v4
+      - name: checkout Code
+        uses: actions/checkout@v5
+
+      - name: setup java
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '25'
-          cache: 'maven'
-      - run: mvn clean test
+
+      - name: setup maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.16
+
+      - name: Running Tests
+        run: mvn clean test

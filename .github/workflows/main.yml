@@ -25,3 +25,9 @@ jobs:
 
       - name: Running Tests
         run: mvn clean test
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: RestAssuredTestResults
+          path: "test-output/reports/*.html"

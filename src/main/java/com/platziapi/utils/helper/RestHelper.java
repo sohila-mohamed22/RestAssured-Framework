@@ -31,8 +31,6 @@ public class RestHelper {
                         .get(endpoint)
                 .then()
                         .spec(responseSpec)
-                        .log()
-                        .all()
                         .extract()
                         .as(responseClass);
     }
@@ -45,8 +43,6 @@ public class RestHelper {
                         .get(endpoint)
                 .then()
                         .spec(responseSpec)
-                        .log()
-                        .all()
                         .extract()
                         .as(typeRef);
     }
@@ -61,8 +57,6 @@ public class RestHelper {
                         .post(endpoint)
                 .then()
                         .spec(responseSpec)
-                        .log()
-                        .all()
                         .extract()
                         .as(responseClass);
     }
@@ -88,8 +82,6 @@ public class RestHelper {
                         .delete(endpoint)
                 .then()
                         .spec(responseSpec)
-                        .log()
-                        .all()
                         .extract()
                         .asString();
     }
@@ -102,8 +94,6 @@ public class RestHelper {
                         .delete(endpoint)
                         .then()
                         .spec(responseSpec)
-                        .log()
-                        .all()
                         .extract()
                         .as(responseClass);
     }

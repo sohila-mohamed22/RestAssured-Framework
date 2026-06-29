@@ -56,7 +56,7 @@ public class ProductsNegativeTest extends BaseTest {
         ProductResponse response = ProductServices.getProductById(invalidId, StatusCode.BAD_REQUEST);
 
         validation.assertTrue((response.getName()).contains(jsonReader.getJsonData("errors.notFound.name")), "Name not found");
-        validation.assertTrue((response.getMessage()).contains(jsonReader.getJsonData("errors.notFound.name")), "Message not found");
+        validation.assertTrue((response.getMessage()).contains(jsonReader.getJsonData("errors.notFound.message")), "Message not found");
     }
 
     @Description("Get related products by not existing id")

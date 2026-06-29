@@ -7,7 +7,6 @@ import com.platzistore.testcases.BaseTest;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.Random;
 
 public class FilterProductsNegativeTest extends BaseTest {
 

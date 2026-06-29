@@ -1,0 +1,13 @@
+{
+  "errors": {
+    "notFound": {
+      "name": "EntityNotFoundError",
+      "message": "Could not find any entity of type "
+    },
+    "duplicateSlug": {
+      "name": "QueryFailedError",
+      "message": "SqliteError: UNIQUE constraint failed: product.slug",
+      "code": "SQLITE_CONSTRAINT_UNIQUE"
+    }
+  }
+}
